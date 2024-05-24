@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Aboreto&family=Cherry+Bomb+One&family=Open+Sans&family=Rowdies&display=swap');
+
+
+body{
+    overflow-x: hidden;
+    background: black;
+    margin: 0;
+
+}
+
+#inicio{
+    overflow-y: hidden;
+    height: 100%;
+}
+
+section{
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+
+}
+
+
+span{
+    position:absolute;
+    pointer-events: none;
+    background: aliceblue;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: animate 5s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        height: 30vh; 
+    }
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0);
+        opacity: 0;
+
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.1) translateY(-300%);
+        opacity: 0;
+
+    }
+}
+
+
+*{
+    font-family: 'Aboreto', cursive;
+    font-family: 'Helvetica', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Console', cursive;
+}
+
+.header {
+    background: 
+    radial-gradient(ellipse 80% 60%  at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url('https://images.pexels.com/photos/1006540/pexels-photo-1006540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1; 
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    height: 100vh;
+}
+
+.inf{
+    font-size: 30px;
+}
+.testimonios{
+    width: 100%;
+    background: 
+    linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 85%, rgba(0,0,0,1) 100%),
+    linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6) 100%),
+        url("https://images.unsplash.com/photo-1497800839469-bdbe4fd9d391?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    /* Imagen de fondo */
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1; 
+    color: white;
+    height: 110vh;
+}
+
+.title p{
+    font-size: 25px;
+}
+
+.profesinales-seguimiento {
+    font-size: 18px;
+}
+
+.whatsapp-now {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    animation: bounce 1s infinite;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-now:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    animation: none;
+}
+
+.paragraph{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.paragraph ul{
+    display: flex;
+    width: 90%;
+    margin-left: -35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.list{
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    border-radius: 8px;
+
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+.front img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border-radius: 8px;
+}
+
+.card .front {
+    transform: rotateY(0deg);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card .back {
+    background-color: rgba(224, 111, 111, 0.89);
+    transform: rotateY(180deg);
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 8px;
+}
+
+.back p{
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+}
+
+.card-container.animate-rotation .card {
+    transform: rotateY(180deg);
+    border-radius: 8px;
+
+}
+
+.image{
+    margin-bottom: 50px;
+    width: auto;
+    height: 90px;
+}
+
+.card-title {
+    text-align: center;
+
+}
+
+.front .back{
+    padding: 10px;
+}
+
+.const_free{
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-size: 22px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    position: relative;
+    animation: expand 1s infinite;
+}
+@keyframes expand {
+    0%, 100% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+@media screen and (max-width: 1400px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila */
+    }
+
+    .card {
+        transform: rotateY(0deg);
+        cursor: pointer;
+        transition: transform 0.5s;
+    }
+
+    .card:hover {
+        transform: rotateY(180deg); /* Rotar en hover */
+    }
+
+    .card-container.animate-rotation .card {
+        transform: rotateY(180deg);
+    }
+
+}
+
+.hr{
+    width: 100%;
+    color: wheat;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    padding: 25px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-float i {
+    font-size: 30px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.texto-testimonios h1{
+    margin-bottom: 10px; font-size: 70px; margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    section{
+        overflow-x: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .title {
+        font-size: 34px;
+    }
+    
+
+}
+
+
+.texto-testimonios{
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.texto-testimonios p{
+    font-weight: 100;
+}
+
+/* CARRUSEL */
+
+.carrusel-testimonios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    background-color: black;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    width: 350px;
+    height: 500px;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  /* background: radial-gradient(black 30%, transparent 70%); */
+  border-radius: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* FONDO GALAXIA */
+
+.bg {
+    background: url(https://img.freepik.com/vector-gratis/humo-morado-rosa-oscuridad_52683-83786.jpg?q=10&h=200) no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+.bg:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+@keyframes sf-fly-by-1 {
+    from {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(0);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-2 {
+    from {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-3 {
+    from {
+        transform: translateZ(-1800px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+}
+.star-field {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    perspective: 1000px;
+    -webkit-perspective: 600px;
+    z-index: -1;
+}
+.star-field .layer {
+    box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7,
+        524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2,
+        440px 490px #d4d4d4, 414px 507px #e6e6e6, -12px 246px #fcfcfc, -384px 369px #e3e3e3, 641px -413px #fcfcfc, 822px 516px #dbdbdb, 449px 132px #c2c2c2, 727px 146px #f7f7f7, -315px -488px #e6e6e6, 952px -70px #e3e3e3,
+        -869px -29px #dbdbdb, 502px 80px #dedede, 764px 342px #e0e0e0, -150px -380px #dbdbdb, 654px -426px #e3e3e3, -325px -263px #c2c2c2, 755px -447px #c7c7c7, 729px -177px #c2c2c2, -682px -391px #e6e6e6, 554px -176px #ededed,
+        -85px -428px #d9d9d9, 714px 55px #e8e8e8, 359px -285px #cfcfcf, -362px -508px #dedede, 468px -265px #fcfcfc, 74px -500px #c7c7c7, -514px 383px #dbdbdb, 730px -92px #cfcfcf, -112px 287px #c9c9c9, -853px 79px #d6d6d6,
+        828px 475px #d6d6d6, -681px 13px #fafafa, -176px 209px #f0f0f0, 758px 457px #fafafa, -383px -454px #ededed, 813px 179px #d1d1d1, 608px 98px whitesmoke, -860px -65px #c4c4c4, -572px 272px #f7f7f7, 459px 533px #fcfcfc,
+        624px -481px #e6e6e6, 790px 477px #dedede, 731px -403px #ededed, 70px -534px #cccccc, -23px 510px #cfcfcf, -652px -237px whitesmoke, -690px 367px #d1d1d1, 810px 536px #d1d1d1, 774px 293px #c9c9c9, -362px 97px #c2c2c2,
+        563px 47px #dedede, 313px 475px #e0e0e0, 839px -491px #e3e3e3, -217px 377px #d4d4d4, -581px 239px #c2c2c2, -857px 72px #cccccc, -23px 340px #dedede, -837px 246px white, 170px -502px #cfcfcf, 822px -443px #e0e0e0, 795px 497px #e0e0e0,
+        -814px -337px #cfcfcf, 206px -339px #f2f2f2, -779px 108px #e6e6e6, 808px 2px #d4d4d4, 665px 41px #d4d4d4, -564px 64px #cccccc, -380px 74px #cfcfcf, -369px -60px #f7f7f7, 47px -495px #e3e3e3, -383px 368px #f7f7f7, 419px 288px #d1d1d1,
+        -598px -50px #c2c2c2, -833px 187px #c4c4c4, 378px 325px whitesmoke, -703px 375px #d6d6d6, 392px 520px #d9d9d9, -492px -60px #c4c4c4, 759px 288px #ebebeb, 98px -412px #c4c4c4, -911px -277px #c9c9c9;
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 50%;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    margin-top: 40%;
+}
+.star-field .layer:nth-child(1) {
+    animation: sf-fly-by-1 5s linear infinite;
+}
+.star-field .layer:nth-child(2) {
+    animation: sf-fly-by-2 5s linear infinite;
+}
+.star-field .layer:nth-child(3) {
+    animation: sf-fly-by-3 5s linear infinite;
+}
+
+
+.perfil{
+    background: 
+        linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 85%, rgba(0,0,0,1) 100%),
+        linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6) 100%),
+
+        url("https://images.pexels.com/photos/20278583/pexels-photo-20278583/free-photo-of-oscuro-metal-reflejo-reflexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    color: #f5f6f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.perfil h1{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.perfil-trabajos{
+    margin-top: -10px;
+}
+
+.perfil img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.perfil-magia{
+    margin-top: 10px;
+}
+
+.perfil a{
+    color: #f5f6f7;
+    padding: 10px 55px;
+    border-radius: 32px;
+    transition: all ease-in-out 0.2s;
+    text-decoration: none;
+    border: 2px solid white;
+    margin-top: 25px;
+    margin-bottom: 35px;
+
+}
+
+.perfil a:hover{
+    background-color: white;
+    color: #DDAD2B;
+}
+
+
+.about{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.about-texto{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 50px;
+}
+
+.about-texto div{
+    width: 33%;
+    height: 275px;
+    padding: 0 20px;
+}
+
+.about-QS{
+    background-color: #DDAD2B;
+    color: #f5f6f7;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.about-C{
+    background-color: #DE982A;
+    color: #f5f6f7;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.about-texto div p{
+    margin-top: 10px;
+    font-size: 18px;
+    height: auto;
+}
+
+.about-texto div h3{
+    font-weight: 100;
+    margin-top: -10px;
+}
+
+.about-texto div p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.contact {
+    z-index: 1;
+    text-align: center;
+    margin-top: -150px;
+    margin-bottom: 100px;
+}
+
+.contact h1{
+    font-size: 50px;
+    color: violet;
+    z-index: 1;
+    font-size: 80px;
+    color: rgb(252, 252, 252);
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+  
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    position: relative;
+    animation: bounce 1s infinite;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    animation: none;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+@media (max-width: 902px){
+
+    .about-texto{
+        height: 400px;
+        margin: 0 35px;
+    }
+
+    .about-texto div p{
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width: 768px){
+    .about-texto div p{
+        font-size: 16px;
+    }
+
+    .about{
+        height: auto;
+    }
+
+    .about-texto{
+        height: 400px;
+        margin: 0 20px;
+    }
+    .inf{
+        margin-left: -20px;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 666px){
+
+    .about-texto{
+        height: 400px;
+        margin: 0;
+    }
+
+    .about-texto div{
+        width: 33%;
+        height: 275px;
+        padding: 0 20px;
+    }
+    
+    .about-QS{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 16px;
+    }
+    
+    .about-C{
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 0;
+    }
+
+    .texto-testimonios h1{
+        font-size: 35px;
+    }
+
+    .contact h1{
+        color: #DE7B2A;
+        margin-top:0px;
+    }
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .list{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 626px){
+    .about{
+        flex-direction: column;
+    }
+    
+    .about-texto{
+        height: 690px;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .about-texto div{
+        width: 100%;
+        height: 33.3%;
+        padding: 0 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .about-texto div h1{
+        margin-top: 10px;
+        padding: 0 20px;
+    }
+
+    .about-texto div h3{
+        margin-top: -5px;
+        margin-bottom: 5px;
+        padding: 0 20px;
+    }
+
+    .about-texto div p{
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 450px){
+
+    .perfil img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 420px){
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .mySlides {
+        display: none;
+        width: 100%;
+    }
+
+    .texto-testimonios p{
+        margin-top: -10px;
+        padding: 0 10px;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .back p{
+        width: 90%;
+    }
+
+
+}
+
+
+@media (max-width: 425px){
+    .inf{
+        margin-left: -20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .const_free{
+        font-size: 18px;
+        padding: 15px 35px;
+    
+    }
+
+    .contact{
+        margin-top: 100px;
+    }
+
+    .texto-testimonios h1{
+        font-size: 45px !important;
+    }
+
+    .whatsapp-button{
+        padding: 20px 25px;
+        width: 250px;
+    }
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 50%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}

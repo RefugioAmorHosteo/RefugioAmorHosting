@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Aboreto&family=Cherry+Bomb+One&family=Open+Sans&family=Rowdies&display=swap');
+
+.punto{
+    margin-left: 2px;
+}
+
+*{
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cherry Bomb One', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rowdies', cursive;
+    font-weight: 100;
+}
+
+body {
+    background-color: black;
+    margin: -20px 0 0 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    margin: 20px 50px 20px 50px;
+}
+
+.tit {
+    font-size: 24px;
+    margin-top: 90px;
+}
+
+.parrafo{
+    margin-top: 50px;
+}
+
+.container h2{
+    margin-top: 50px;
+}
