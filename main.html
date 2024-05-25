@@ -68,6 +68,12 @@ function showSlides(n) {
 </script>
 
 <style>
+body {
+    background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Opcional: para centrar la imagen de fondo */
+}
     html{
     --dim: 3.4rem;
   }
@@ -127,7 +133,7 @@ function showSlides(n) {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Montserrat',sans-serif;
       z-index: 9999;
       margin: 0;
   }
@@ -318,7 +324,7 @@ function showSlides(n) {
   }
   
   .nvf{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat',sans-serif;
   }
   
   
@@ -519,18 +525,25 @@ span{
 
 
 *{
-    font-family: 'Aboreto', cursive;
-    font-family: 'Helvetica', cursive;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Console', cursive;
+    font-weight: 700;
+    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat Sans', sans-serif;
+    font-family: 'Montserrat',sans-serif;
 }
 
 .header {
     background: 
+    linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 85%, rgba(0,0,0,1) 100%),
     radial-gradient(ellipse 80% 60%  at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6) 100%),
+
         url('https://images.pexels.com/photos/1006540/pexels-photo-1006540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
     background-position: center;
+}
+.header p{
+    font-weight: 50;
 }
 
 .title {
@@ -606,6 +619,7 @@ span{
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-weight: 100;
 }
 
 .paragraph ul{
@@ -616,6 +630,9 @@ span{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.paragraph li{
+    font-weight: 50;
 }
 
 .list{
@@ -775,15 +792,27 @@ ul {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    padding: 25px;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 50px;
+    text-decoration: none;
     transition: transform 0.3s, opacity 0.3s;
+    gap: 10px; /* Space between text and icon */
 }
 
 .whatsapp-float i {
-    font-size: 30px;
+    font-size: 14px; /* Adjust size of the icon */
+}
+
+
+
+.whatsapp-float i {
+    font-size: 20px;
 }
 
 .whatsapp-float:hover {
@@ -1053,7 +1082,7 @@ ul {
     margin-top: 10px;
 }
 
-.perfil a{
+.perfil_a{
     color: #f5f6f7;
     padding: 10px 55px;
     border-radius: 32px;
@@ -1065,7 +1094,7 @@ ul {
 
 }
 
-.perfil a:hover{
+.perfil_a:hover{
     background-color: white;
     color: #DDAD2B;
 }
@@ -1448,20 +1477,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
 
     <!-- FIN LOADER -->
-    
-
-<div class="popup" id="popup">
-    <div class="popup-content">
-        <h2>Confirmación de Edad y Términos y Condiciones</h2>
-        <p>Por favor, confirma que tienes al menos 18 años y que has leído nuestros términos y condiciones.</p>
-        <label for="age-checkbox">Soy mayor de 18 años:</label>
-        <input type="checkbox" id="age-checkbox">
-        <label for="terms-checkbox">He leído y acepto los términos y condiciones:</label>
-        <input type="checkbox" id="terms-checkbox">
-        <button onclick="closePopup()">Continuar</button>
-    </div>
-</div>
-
 
 <div class="main">
 <section id="inicio">
@@ -1471,7 +1486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h1>El refugio del amor sagrado.</h1>
             <p>Bienvenidos al Centro Esotérico "El refugio del amor sagrado."</p>
                 <p class="profesionales-seguimiento">Contamos con más de 20 años de experiencia guiando almas y ofreciendo atención personalizada</p>
-                <a href="https://api.whatsapp.com/send?phone=3517177880" target="_blank" class="whatsapp-now">¡Contacta un profesional ahora!</a>
+                <a class="perfil_a" style="font-weight: 700; font-size: 25px;" href="https://api.whatsapp.com/send?phone=3517177880">¡Realiza una consulta ahora!</a>
         </div>
 
     </div>
@@ -1481,7 +1496,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li style="font-size: 28px;" class="list">¿Cambios repentinos en tu pareja? </li>
             <li style="font-size: 30px;" class="list">¿El amor en tu relación se está desvaneciendo?</li>
             <li style="font-size: 32px;" class="list">¿Las discusiones y la distancia están quebrando la conexión que solían tener?</li>
-            <li style="font-size: 35px; color: gold;" class="list" >Contacta con un nosotros ahora mismo. Finaliza esta angustia desgarradora. ¿Listo/a para dar el paso?</li>
+            <li style="font-size: 35px; color: gold; font-weight: 700;" class="list" >Contacta con un nosotros ahora mismo. Finaliza esta angustia desgarradora. ¿Listo/a para dar el paso?</li>
         </ul>
     </div>
 
@@ -1562,9 +1577,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     handleScroll(); 
     });
     </script>
-    
 
     <a href="https://api.whatsapp.com/send?phone=3517177880" class="whatsapp-float" target="_blank">
+        ¿En que podemos ayudarte?
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1575,18 +1590,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h1>Visitanos en Facebook</h1>
             <img src="https://scontent.fcor2-2.fna.fbcdn.net/v/t39.30808-6/434148946_122105418698252997_1976116120496354841_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=juOq7HFirRwQ7kNvgH3GZSw&_nc_ht=scontent.fcor2-2.fna&oh=00_AYCq6Ad-CItkYxW0-fFqKBmZvImTnZOs6EuJDQVT1Gas-A&oe=66558E2B" >
             <p class="perfil-magia">Consultas e información</p>
-            <a href="https://www.facebook.com/people/El-refugio-del-amor-sagrado/61557589930324/">Facebook</a>
+            <a class="perfil_a" href="https://www.facebook.com/people/El-refugio-del-amor-sagrado/61557589930324/">Facebook</a>
         </div>
     </section>
 
     <section class="about-body" id="about-body">
         <div class="paragraph">
             <h1 style="color: #DDAD2B">Nuestra experiencia:</h1>
-            <p style="width: 75%;">
+            <p style="width: 75%; font-weight: 100;">
                 Durante más de 20 años, nuestro Centro Esotérico ha guiado a miles de personas mediante consultas personalizadas, talleres espirituales y estudios profundos de esoterismo, desarrollando una sabiduría incomparable.
             </p>
             <br style="height: 5%;">
-            <p style="width: 75%;">
+            <p style="width: 75%; font-weight: 100;">
                 Capacitamos a nuestros profesionales con programas intensivos de formación esotérica, incluyendo cursos avanzados, prácticas supervisadas y actualización continua en técnicas espirituales y de sanación.
             </p>
         </div>
@@ -1677,10 +1692,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             </div>
             <hr style="margin: 5px 0;">
-            <a class="terminos" href="terminos-y-condiciones">Términos y condiciones</a>
             <div class="copyright">
                 <p>Copyright © 2023 | El refugio del amor sagrado. | </p>
-                <a href="https://www.teamlussary.com.ar">Team Lussary</a>
             </div>
         </div>
     </div>
