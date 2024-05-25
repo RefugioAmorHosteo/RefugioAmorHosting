@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> El refugio del amor sagrado. </title>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P9FFM5CV');</script>
+<script>
+    window.addEventListener("load", function(){
+    const loader = document.querySelector("#loader");
+    const loader_container = document.querySelector("#loader-container");
+    
+    setTimeout(function() {
+      loader.className += " hidden";
+      loader_container.className += " hidden";
+    }, 800); 
+  });
+    
+    
+      $(document).ready(function() {
+        // Agrega un efecto de desplazamiento suave a todos los enlaces que apunten a anclas en la misma página
+        $('a[href*="#"]').on('click', function(event) {
+          if (this.hash !== '') {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 500, function() {
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+</script>
+<script>
+let slideIndex = 1;
+
+window.addEventListener("load", function() {
+    showSlides(slideIndex);
+});
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+<style>
+    html{
+    --dim: 3.4rem;
+  }
+  
+  /* LOADER */
+  .loader-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 99999;
+    background-color: #212121;
+  }
+
+  .moon, .shadow {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(216, 216, 216);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .shadow {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background: #212121;
+   /*Change these color to the bg of your website*/
+    transition: all .3s ease;
+    animation: move_4123 1.2s infinite alternate ease-in-out;
+    transform: translate3d(8px, -8px, 0);
+  }
+  
+  @keyframes move_4123 {
+    100% {
+      transform: translate3d(36px, -36px, 0);
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+    
+  /* NAVBAR */
+  .navBar {
+      background-color: #00000000;
+      position: fixed;
+      width: 100%;
+      transition: background-color 0.3s ease-in-out;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      z-index: 9999;
+      margin: 0;
+  }
+  
+  .logo a{
+    display: block;
+    margin-left: 30px;
+    margin: 0;
+  }
+  
+  .logo a img{
+    display: block;
+    width: 75px;
+    height: 100%;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  .navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 0;
+    
+  }
+  
+  .menu li{
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  .menu li a{
+    color: rgb(250, 250, 250);
+    text-decoration: dashed;
+    display: block; 
+    padding: 5px 15px;
+    font-size: 20px;
+    line-height: 1;
+    transition: 0.3s;
+    margin-top: 15px;
+    margin: 0;
+  }
+
+  .nav-link {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+  
+  .menu li a:hover{
+    padding: 0px 15px 10px 15px;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 1);
+    color: rgb(236, 255, 153);
+    margin: 0;
+  }
+  
+  
+  
+  .hamburguer{
+    position: relative;
+    width: 25px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+    right: 40px;
+    margin: 0;
+  }
+  
+  .hamburguer:before, .hamburguer:after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 0;
+  }
+  
+  .hamburguer:before{
+    top: -10px;
+    width: 25px;
+    margin: 0;
+  }
+  
+  .hamburguer:after{
+    top: 10px;
+    width: 25px;
+    margin: 0;
+  }
+  
+  .toogle-menu{
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+    right: 55px;
+    margin: 0;
+  }
+  
+  .hamburguer, .toogle-menu{
+    display: none;
+    margin: 0;
+  }
+  
+  .navegacion input:checked ~ .hamburguer{
+    background: transparent;
+    margin: 0;
+  }
+  
+  .navegacion input:checked ~ .hamburguer:before{
+    top: 0;
+    transform: rotate(-45deg);
+    margin: 0;
+  }
+  
+  .navegacion input:checked ~ .hamburguer:after{
+    top: 0;
+    transform: rotate(45deg);
+    margin: 0;
+  }
+  
+  .navegacion input:checked ~ .menu{
+    right: 0;
+    margin: 0;
+  }
+  
+  
+  @media screen and (max-width: 800px){
+    .hamburguer, .toogle-menu{
+        display: block;
+      }
+  
+      .navBar{
+        padding: 10px 20px;
+      }
+  
+      .menu{
+        justify-content: start;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: -16px;
+        right: -150%;
+        background-color: rgba(0, 0, 0, 0.575);
+        width: 100%;
+        height: 100%;
+        padding-top: 65px;
+      }
+  
+      .menu li{
+        width: 100%; 
+      }
+  
+      .menu li a, .menu li a:hover{
+        padding: 20px;
+        font-size: 24px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+        margin-right: 0px;
+      }
+  
+      .menu li a {
+        white-space: normal; /* Permite que el texto se divida en varias líneas */
+        overflow: visible; /* Muestra todo el texto */
+        text-overflow: initial; /* Restaura el comportamiento normal del texto */
+        padding: 10px; /* Ajusta el espaciado del enlace en la versión hamburguesa */
+        margin-right: 0; /* Elimina el margen derecho en la versión hamburguesa */
+      }
+    
+  }
+  
+  .logo a img{
+    margin-left: 5px;
+    padding: 0;
+  }
+  
+  .nvf{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  
+  /* SOCIAL MEDIA */
+  .footer{
+    background-color: rgb(20, 20, 20);
+    margin-top: 100px;
+  }
+  
+  .footer-contactanos{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-contactanos-botones{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-contactanos-botones div{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor:initial;
+  }
+  
+  
+  .icono{
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  .icono:hover{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+  }
+  
+  
+  
+  .footer-contactanos hr{
+    width: 120px;
+  }
+  
+  .copyright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px 0;
+  }
+  .copyright p{
+    margin: 0;
+  }
+  
+  .copyright a{
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+  }
+  
+  @media screen and (max-width: 600px){
+    .footer-contactanos-botones{
+      width: 100%;
+    }
+  
+    .icono{
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+    .icono:hover{
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+    }
+    
+    
+  }
+
+  @media screen and (max-width: 400px){
+    .copyright {
+      font-size: 15px;
+    }
+  }
+
+  
+
+  
+  @media screen and (max-width: 320px){
+    .copyright{
+        font-size: 13px;
+    }
+  
+    .icono{
+      width: 25px;
+      height: 25px;
+      padding: 2px;
+      transition: all 0.3s ease-in-out;
+      filter: invert(100%);
+    }
+    .icono:hover{
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .copyright {
+      font-size: 10px;
+    }
+    
+  }
+</style>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Aboreto&family=Cherry+Bomb+One&family=Open+Sans&family=Rowdies&display=swap');
+
+
+body{
+    overflow-x: hidden;
+    background: black;
+    margin: 0;
+
+}
+
+#inicio{
+    overflow-y: hidden;
+    height: 100%;
+}
+
+section{
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+
+}
+
+
+span{
+    position:absolute;
+    pointer-events: none;
+    background: aliceblue;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: animate 5s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        height: 30vh; 
+    }
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0);
+        opacity: 0;
+
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.1) translateY(-300%);
+        opacity: 0;
+
+    }
+}
+
+
+*{
+    font-family: 'Aboreto', cursive;
+    font-family: 'Helvetica', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Console', cursive;
+}
+
+.header {
+    background: 
+    radial-gradient(ellipse 80% 60%  at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url('https://images.pexels.com/photos/1006540/pexels-photo-1006540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1; 
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    height: 100vh;
+}
+
+.inf{
+    font-size: 30px;
+}
+.testimonios{
+    width: 100%;
+    background: 
+    linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 85%, rgba(0,0,0,1) 100%),
+    linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6) 100%),
+        url("https://images.unsplash.com/photo-1497800839469-bdbe4fd9d391?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    /* Imagen de fondo */
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1; 
+    color: white;
+    height: 110vh;
+}
+
+.title p{
+    font-size: 25px;
+}
+
+.profesinales-seguimiento {
+    font-size: 18px;
+}
+
+.whatsapp-now {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    animation: bounce 1s infinite;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-now:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    animation: none;
+}
+
+.paragraph{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.paragraph ul{
+    display: flex;
+    width: 90%;
+    margin-left: -35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.list{
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    border-radius: 8px;
+
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+.front img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border-radius: 8px;
+}
+
+.card .front {
+    transform: rotateY(0deg);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card .back {
+    background-color: rgba(224, 111, 111, 0.89);
+    transform: rotateY(180deg);
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 8px;
+}
+
+.back p{
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+}
+
+.card-container.animate-rotation .card {
+    transform: rotateY(180deg);
+    border-radius: 8px;
+
+}
+
+.image{
+    margin-bottom: 50px;
+    width: auto;
+    height: 90px;
+}
+
+.card-title {
+    text-align: center;
+
+}
+
+.front .back{
+    padding: 10px;
+}
+
+.const_free{
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-size: 22px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    position: relative;
+    animation: expand 1s infinite;
+}
+@keyframes expand {
+    0%, 100% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+@media screen and (max-width: 1400px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila */
+    }
+
+    .card {
+        transform: rotateY(0deg);
+        cursor: pointer;
+        transition: transform 0.5s;
+    }
+
+    .card:hover {
+        transform: rotateY(180deg); /* Rotar en hover */
+    }
+
+    .card-container.animate-rotation .card {
+        transform: rotateY(180deg);
+    }
+
+}
+
+.hr{
+    width: 100%;
+    color: wheat;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    padding: 25px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-float i {
+    font-size: 30px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.texto-testimonios h1{
+    margin-bottom: 10px; font-size: 70px; margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    section{
+        overflow-x: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .title {
+        font-size: 34px;
+    }
+    
+
+}
+
+
+.texto-testimonios{
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.texto-testimonios p{
+    font-weight: 100;
+}
+
+/* CARRUSEL */
+
+.carrusel-testimonios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    background-color: black;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    width: 350px;
+    height: 500px;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  /* background: radial-gradient(black 30%, transparent 70%); */
+  border-radius: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* FONDO GALAXIA */
+
+.bg {
+    background: url(https://img.freepik.com/vector-gratis/humo-morado-rosa-oscuridad_52683-83786.jpg?q=10&h=200) no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+.bg:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+@keyframes sf-fly-by-1 {
+    from {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(0);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-2 {
+    from {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-3 {
+    from {
+        transform: translateZ(-1800px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+}
+.star-field {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    perspective: 1000px;
+    -webkit-perspective: 600px;
+    z-index: -1;
+}
+.star-field .layer {
+    box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7,
+        524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2,
+        440px 490px #d4d4d4, 414px 507px #e6e6e6, -12px 246px #fcfcfc, -384px 369px #e3e3e3, 641px -413px #fcfcfc, 822px 516px #dbdbdb, 449px 132px #c2c2c2, 727px 146px #f7f7f7, -315px -488px #e6e6e6, 952px -70px #e3e3e3,
+        -869px -29px #dbdbdb, 502px 80px #dedede, 764px 342px #e0e0e0, -150px -380px #dbdbdb, 654px -426px #e3e3e3, -325px -263px #c2c2c2, 755px -447px #c7c7c7, 729px -177px #c2c2c2, -682px -391px #e6e6e6, 554px -176px #ededed,
+        -85px -428px #d9d9d9, 714px 55px #e8e8e8, 359px -285px #cfcfcf, -362px -508px #dedede, 468px -265px #fcfcfc, 74px -500px #c7c7c7, -514px 383px #dbdbdb, 730px -92px #cfcfcf, -112px 287px #c9c9c9, -853px 79px #d6d6d6,
+        828px 475px #d6d6d6, -681px 13px #fafafa, -176px 209px #f0f0f0, 758px 457px #fafafa, -383px -454px #ededed, 813px 179px #d1d1d1, 608px 98px whitesmoke, -860px -65px #c4c4c4, -572px 272px #f7f7f7, 459px 533px #fcfcfc,
+        624px -481px #e6e6e6, 790px 477px #dedede, 731px -403px #ededed, 70px -534px #cccccc, -23px 510px #cfcfcf, -652px -237px whitesmoke, -690px 367px #d1d1d1, 810px 536px #d1d1d1, 774px 293px #c9c9c9, -362px 97px #c2c2c2,
+        563px 47px #dedede, 313px 475px #e0e0e0, 839px -491px #e3e3e3, -217px 377px #d4d4d4, -581px 239px #c2c2c2, -857px 72px #cccccc, -23px 340px #dedede, -837px 246px white, 170px -502px #cfcfcf, 822px -443px #e0e0e0, 795px 497px #e0e0e0,
+        -814px -337px #cfcfcf, 206px -339px #f2f2f2, -779px 108px #e6e6e6, 808px 2px #d4d4d4, 665px 41px #d4d4d4, -564px 64px #cccccc, -380px 74px #cfcfcf, -369px -60px #f7f7f7, 47px -495px #e3e3e3, -383px 368px #f7f7f7, 419px 288px #d1d1d1,
+        -598px -50px #c2c2c2, -833px 187px #c4c4c4, 378px 325px whitesmoke, -703px 375px #d6d6d6, 392px 520px #d9d9d9, -492px -60px #c4c4c4, 759px 288px #ebebeb, 98px -412px #c4c4c4, -911px -277px #c9c9c9;
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 50%;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    margin-top: 40%;
+}
+.star-field .layer:nth-child(1) {
+    animation: sf-fly-by-1 5s linear infinite;
+}
+.star-field .layer:nth-child(2) {
+    animation: sf-fly-by-2 5s linear infinite;
+}
+.star-field .layer:nth-child(3) {
+    animation: sf-fly-by-3 5s linear infinite;
+}
+
+
+.perfil{
+    background: 
+        linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 85%, rgba(0,0,0,1) 100%),
+        linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6) 100%),
+
+        url("https://images.pexels.com/photos/20278583/pexels-photo-20278583/free-photo-of-oscuro-metal-reflejo-reflexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    color: #f5f6f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.perfil h1{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.perfil-trabajos{
+    margin-top: -10px;
+}
+
+.perfil img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.perfil-magia{
+    margin-top: 10px;
+}
+
+.perfil a{
+    color: #f5f6f7;
+    padding: 10px 55px;
+    border-radius: 32px;
+    transition: all ease-in-out 0.2s;
+    text-decoration: none;
+    border: 2px solid white;
+    margin-top: 25px;
+    margin-bottom: 35px;
+
+}
+
+.perfil a:hover{
+    background-color: white;
+    color: #DDAD2B;
+}
+
+
+.about{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.about-texto{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 50px;
+}
+
+.about-texto div{
+    width: 33%;
+    height: 275px;
+    padding: 0 20px;
+}
+
+.about-QS{
+    background-color: #DDAD2B;
+    color: #f5f6f7;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.about-C{
+    background-color: #DE982A;
+    color: #f5f6f7;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.about-texto div p{
+    margin-top: 10px;
+    font-size: 18px;
+    height: auto;
+}
+
+.about-texto div h3{
+    font-weight: 100;
+    margin-top: -10px;
+}
+
+.about-texto div p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.contact {
+    z-index: 1;
+    text-align: center;
+    margin-top: -150px;
+    margin-bottom: 100px;
+}
+
+.contact h1{
+    font-size: 50px;
+    color: violet;
+    z-index: 1;
+    font-size: 80px;
+    color: rgb(252, 252, 252);
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+  
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    position: relative;
+    animation: bounce 1s infinite;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    animation: none;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+@media (max-width: 902px){
+
+    .about-texto{
+        height: 400px;
+        margin: 0 35px;
+    }
+
+    .about-texto div p{
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width: 768px){
+    .about-texto div p{
+        font-size: 16px;
+    }
+
+    .about{
+        height: auto;
+    }
+
+    .about-texto{
+        height: 400px;
+        margin: 0 20px;
+    }
+    .inf{
+        margin-left: -20px;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 666px){
+
+    .about-texto{
+        height: 400px;
+        margin: 0;
+    }
+
+    .about-texto div{
+        width: 33%;
+        height: 275px;
+        padding: 0 20px;
+    }
+    
+    .about-QS{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 16px;
+    }
+    
+    .about-C{
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 0;
+    }
+
+    .texto-testimonios h1{
+        font-size: 35px;
+    }
+
+    .contact h1{
+        color: #DE7B2A;
+        margin-top:0px;
+    }
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .list{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 626px){
+    .about{
+        flex-direction: column;
+    }
+    
+    .about-texto{
+        height: 690px;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .about-texto div{
+        width: 100%;
+        height: 33.3%;
+        padding: 0 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .about-texto div h1{
+        margin-top: 10px;
+        padding: 0 20px;
+    }
+
+    .about-texto div h3{
+        margin-top: -5px;
+        margin-bottom: 5px;
+        padding: 0 20px;
+    }
+
+    .about-texto div p{
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 450px){
+
+    .perfil img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 420px){
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .mySlides {
+        display: none;
+        width: 100%;
+    }
+
+    .texto-testimonios p{
+        margin-top: -10px;
+        padding: 0 10px;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .back p{
+        width: 90%;
+    }
+
+
+}
+
+
+@media (max-width: 425px){
+    .inf{
+        margin-left: -20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .const_free{
+        font-size: 18px;
+        padding: 15px 35px;
+    
+    }
+
+    .contact{
+        margin-top: 100px;
+    }
+
+    .texto-testimonios h1{
+        font-size: 45px !important;
+    }
+
+    .whatsapp-button{
+        padding: 20px 25px;
+        width: 250px;
+    }
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 50%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}    
+</style>
+
+<style>
+
+
+</style>
+<!-- End Google Tag Manager -->
+
+    
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/static/css/base_main.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- SCROOL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    
+        <link rel="stylesheet" href="/static/css/main.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FONT AWESOME! -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>El refugio del amor sagrado</title>
+        <link rel="shortcut icon" type="image/jpeg" href="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f52e.png" />
+
+
+
+    
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/baseTarot.js"></script>
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FFM5CV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- LOADER -->
+    
+    <div class="loader-container" id="loader-container">
+        <div class="moon loader" id="loader">
+            <div class="shadow"></div>
+        </div>
+    </div>
+    
+
+    <!-- FIN LOADER -->
+    
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Confirmación de Edad y Términos y Condiciones</h2>
+        <p>Por favor, confirma que tienes al menos 18 años y que has leído nuestros términos y condiciones.</p>
+        <label for="age-checkbox">Soy mayor de 18 años:</label>
+        <input type="checkbox" id="age-checkbox">
+        <label for="terms-checkbox">He leído y acepto los términos y condiciones:</label>
+        <input type="checkbox" id="terms-checkbox">
+        <button onclick="closePopup()">Continuar</button>
+    </div>
+</div>
+
+
+<div class="main">
+<section id="inicio">
+
+    <div class="header">
+        <div class="title">
+            <h1>El refugio del amor sagrado.</h1>
+            <p>Bienvenidos al Centro Esotérico "El refugio del amor sagrado."</p>
+                <p class="profesionales-seguimiento">Contamos con más de 20 años de experiencia guiando almas y ofreciendo atención personalizada</p>
+                <a href="https://api.whatsapp.com/send?phone=3517177880" target="_blank" class="whatsapp-now">¡Contacta un profesional ahora!</a>
+        </div>
+
+    </div>
+</section>
+    <div class="paragraph">
+        <ul>
+            <li style="font-size: 28px;" class="list">¿Cambios repentinos en tu pareja? </li>
+            <li style="font-size: 30px;" class="list">¿El amor en tu relación se está desvaneciendo?</li>
+            <li style="font-size: 32px;" class="list">¿Las discusiones y la distancia están quebrando la conexión que solían tener?</li>
+            <li style="font-size: 35px; color: gold;" class="list" >Contacta con un nosotros ahora mismo. Finaliza esta angustia desgarradora. ¿Listo/a para dar el paso?</li>
+        </ul>
+    </div>
+
+    <div id="card-container" class="card-container">
+        
+        <div class="card" style="background-color: #D9AA48;">
+            <div class="front">
+                <img src="https://cdn-icons-png.flaticon.com/512/5498/5498761.png" class="image" alt="Amarres, Endulzamientos, Retornos de Pareja, Casamiento espiritual">
+                <h3 class="card-title">AMARRES</h3>
+            </div>
+            <div class="back"><p>Nuestros Amarres de Amor reavivan la llama perdida y reconstruyen los lazos que los unieron. Deja atrás la tristeza, da el paso para recuperar el amor y la armonía que mereces.</p></div>
+        </div>
+        
+        <div class="card" style="background-color: #D9CD48;">
+            <div class="front">
+                <img src="https://img.freepik.com/iconos-gratis/atrapasuenos_318-797911.jpg?w=2000" class="image" alt="Amarres, Endulzamientos, Retornos de Pareja, Casamiento espiritual">
+                <h3 class="card-title">ENDULZAMIENTO</h3>
+            </div>
+            <div class="back"><p>Con nuestros Endulzamientos, suavizas tensiones, fomentas el amor y atraes a tu ser amado constantemente. Transforma tu relación en fuente de felicidad duradera.</p></div>
+        </div>
+        
+        <div class="card" style="background-color: #D9BC48;">
+            <div class="front">
+                <img src="https://simbolosysignificados.es/wp-content/uploads/1632220006_928_Simbolos-de-la-magia-y-su-significado.png" class="image" alt="Amarres, Endulzamientos, Retornos de Pareja, Casamiento espiritual">
+                <h3 class="card-title">RETORNO AMOROSO</h3>
+            </div>
+            <div class="back"><p>La separación duele. Estamos aquí para ayudarte a recuperar lo que fue tuyo, con el hechizo perfecto para la reconciliación. Supera la distancia, ten una segunda oportunidad para el amor, perdón y felicidad juntos. Actúa ya, reclama tu felicidad y restaura la merecida conexión.</p></div>
+        </div>
+        
+        <div class="card" style="background-color: #D99748;">
+            <div class="front">
+                <img src="https://img.freepik.com/iconos-gratis/hamsa_318-760593.jpg" class="image" alt="Amarres, Endulzamientos, Retornos de Pareja, Casamiento espiritual">
+                <h3 class="card-title">CASAMIENTO ESPIRITUAL</h3>
+            </div>
+            <div class="back"><p>El amor se fortalece en la unión profunda. Trasciende lo físico para ser almas gemelas. Da el paso hacia un compromiso más significativo. Fortalece y da nuevo significado a tu relación.</p></div>
+        </div>
+        
+    </div>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const cardContainer = document.getElementById("card-container");
+
+    function flipCard() {
+        const cardInner = this.querySelector(".card-inner");
+        cardInner.classList.toggle("flipped");
+    }
+
+    const cards = cardContainer.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.addEventListener("click", flipCard);
+    });
+
+    let isInViewport = false;
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        const currentlyInView = isElementInViewport(cardContainer);
+        if (currentlyInView && !isInViewport) {
+            isInViewport = true;
+            cardContainer.classList.add("animate-rotation");
+        } else if (!currentlyInView && isInViewport) {
+            isInViewport = false;
+            cardContainer.classList.remove("animate-rotation");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); 
+    });
+    </script>
+    
+
+    <a href="https://api.whatsapp.com/send?phone=3517177880" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <br>
+
+    <section>
+        <div class="perfil">
+            <h1>Visitanos en Facebook</h1>
+            <img src="https://scontent.fcor2-2.fna.fbcdn.net/v/t39.30808-6/434148946_122105418698252997_1976116120496354841_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=juOq7HFirRwQ7kNvgH3GZSw&_nc_ht=scontent.fcor2-2.fna&oh=00_AYCq6Ad-CItkYxW0-fFqKBmZvImTnZOs6EuJDQVT1Gas-A&oe=66558E2B" >
+            <p class="perfil-magia">Consultas e información</p>
+            <a href="https://www.facebook.com/people/El-refugio-del-amor-sagrado/61557589930324/">Facebook</a>
+        </div>
+    </section>
+
+    <section class="about-body" id="about-body">
+        <div class="paragraph">
+            <h1 style="color: #DDAD2B">Nuestra experiencia:</h1>
+            <p style="width: 75%;">
+                Durante más de 20 años, nuestro Centro Esotérico ha guiado a miles de personas mediante consultas personalizadas, talleres espirituales y estudios profundos de esoterismo, desarrollando una sabiduría incomparable.
+            </p>
+            <br style="height: 5%;">
+            <p style="width: 75%;">
+                Capacitamos a nuestros profesionales con programas intensivos de formación esotérica, incluyendo cursos avanzados, prácticas supervisadas y actualización continua en técnicas espirituales y de sanación.
+            </p>
+        </div>
+    </section>
+
+    <section style="display: flex; position: relative;" id="testimonios">
+        <div class="testimonios">
+
+            <div class="texto-testimonios">
+                <h1 style="margin-bottom: 10px; font-size: 70px; margin-top: 30px;">TESTIMONIOS</h1> 
+                <p style="margin-bottom: 10px;">Estas son algunas de las personas que quedaron contentas con nuestro gran trabajo.</p>
+            </div>
+            
+
+            <div class="carrusel-testimonios">
+                <div class="slideshow-container">
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 8</div>
+                    <img src="src/testimonio-1.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 8</div>
+                    <img src="src/testimonio-2.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 8</div>
+                    <img src="src/testimonio-3.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 8</div>
+                    <img src="src/testimonio-4.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 8</div>
+                    <img src="src/testimonio-5.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 8</div>
+                    <img src="src/testimonio-6.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 8</div>
+                    <img src="src/testimonio-7.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 8</div>
+                    <img src="src/testimonio-8.webp" style="width:100%" alt="Messi">
+                </div>
+                
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            </div>
+        </div>
+        </div>
+        <section class="contact" id="contactanos">
+            <h1 style="color: #ff9e4e">EMPIEZA AHORA</h1>
+            <a href="https://api.whatsapp.com/send?phone=3517177880" target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> ¡Consulta GRATIS!
+            </a>
+        </section>
+    </section>
+
+    
+</div>
+<script src="/static/js/main.js"></script>
+
+
+    
+   
+    <div class="footer" id="footer">
+        <div class="footer-contactanos">
+            <h2>Contáctanos</h2>
+            <div class="footer-contactanos-botones">
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=3517177880"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROeFmbyg7c-sLUfRtiad2Qs64zAdacS6DTyYUpMImslw&s" alt="aas" class="icono"></a>
+            </div>
+
+            </div>
+            <hr style="margin: 5px 0;">
+            <a class="terminos" href="terminos-y-condiciones">Términos y condiciones</a>
+            <div class="copyright">
+                <p>Copyright © 2023 | El refugio del amor sagrado. | </p>
+                <a href="https://www.teamlussary.com.ar">Team Lussary</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
