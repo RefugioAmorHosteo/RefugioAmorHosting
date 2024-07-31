@@ -6,69 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> El refugio del amor sagrado. </title>
-
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P9FFM5CV');</script>
-<script>
-    window.addEventListener("load", function(){
-    const loader = document.querySelector("#loader");
-    const loader_container = document.querySelector("#loader-container");
-    
-    setTimeout(function() {
-      loader.className += " hidden";
-      loader_container.className += " hidden";
-    }, 800); 
-  });
-    
-    
-      $(document).ready(function() {
-        // Agrega un efecto de desplazamiento suave a todos los enlaces que apunten a anclas en la misma página
-        $('a[href*="#"]').on('click', function(event) {
-          if (this.hash !== '') {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 500, function() {
-              window.location.hash = hash;
-            });
-          }
-        });
-      });
-</script>
-<script>
-let slideIndex = 1;
-
-window.addEventListener("load", function() {
-    showSlides(slideIndex);
-});
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slides[slideIndex-1].style.display = "block";  
-}
-</script>
-
-<!-- End Google Tag Manager -->
-
     
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/static/css/base_main.css">
@@ -95,13 +32,6 @@ function showSlides(n) {
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/static/js/baseTarot.js"></script>
-
-    
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FFM5CV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 
     <!-- LOADER -->
     
