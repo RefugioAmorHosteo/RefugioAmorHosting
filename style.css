@@ -483,7 +483,7 @@ section{
 .inf{
     font-size: 30px;
 }
-.testimonios{
+.os{
     width: 100%;
     background: 
     linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 85%, rgba(0,0,0,1) 100%),
@@ -862,6 +862,7 @@ ul {
 }
 
 .contact {
+    overflow: hidden;
     z-index: 1;
     text-align: center;
     margin-bottom: 100px;
@@ -1225,6 +1226,7 @@ ul {
 }
 
 .testimonios{
+    overflow: hidden;
     padding: 100px 0;
     margin: 0;
 }
