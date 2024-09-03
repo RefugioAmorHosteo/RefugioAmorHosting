@@ -417,6 +417,9 @@ section{
     section {
         height: 30vh; 
     }
+    .aa{
+        display: none;
+    }
 }
 
 @keyframes animate{
@@ -963,6 +966,14 @@ ul {
     padding: 20px;
 }
 
+
+.fundador-texto hr{
+    margin: 0 auto;
+    width: 20%; 
+    margin: 20px;
+}
+
+
 .fundador-texto p {
     margin: 0;
     color: #cccccc;
@@ -1273,4 +1284,23 @@ ul {
     max-width: 800px;
     margin-top: 20px;
     color: hsl(0, 0%, 5%);
+}
+.title-main {
+    transform-origin: center;
+    animation: abanico 3s  forwards;
+    margin-bottom: 30px;
+}
+
+@keyframes abanico {
+    0% {
+        transform: scale(0.6);
+        color: rgba(255, 255, 255, 0);
+    }
+    80%{
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        color: rgba(255, 255, 255, 1);
+    }
 }
